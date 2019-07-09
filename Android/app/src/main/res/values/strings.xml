@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Share Pic</string>
+    <string name="action_settings">Settings</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="confirm_Password">Confirm Password</string>
+    <string name="Name">Name</string>
+    <string name="LastName">LastName</string>
+    <string name="Email">Email</string>
+    <string name="register_you">Register You</string>
+    <string name="textview">TextView</string>
+    <string name="profil_picture_button">take from gallery</string>
+    <string name="send">Confirm</string>
+    <string name="username">Username</string>
+    <string name="followers">Followers :</string>
+    <string name="following">Following :</string>
+    <string name="post">Post :</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="new_username">New Username</string>
+    <string name="localisation">Localisation</string>
+    <string name="description">Description</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string-array name="my_profil">
+        <item>Test</item>
+        <item>123</item>
+        <item>123456</item>
+        <item>TOTO</item>
+    </string-array>
+</resources>

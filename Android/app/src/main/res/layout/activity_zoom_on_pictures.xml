@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".zoomOnPictures">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_username"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="TextView"
+                android:textColor="@android:color/background_dark" />
+
+            <ImageView
+                android:id="@+id/ImagePictures"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/ic_launcher_background"
+                android:src="@drawable/img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.258" />
+
+            <TextView
+                android:id="@+id/textView_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="66.6"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/likes_linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/likes_pictures_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+                        <TextView
+                            android:id="@+id/TextView_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="TextView"
+                            app:layout_constraintTop_toBottomOf="@+id/ImagePictures" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/comments_linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/comments_pictures_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@mipmap/insta_round" />
+
+                        <TextView
+                            android:id="@+id/TextView_comments"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/TextView"
+                            android:text="TextView2"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/ImageButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Write a Comments"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/send_comment_btn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="send" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/comments_list"
+                style="@android:style/Widget.Holo.ExpandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="10000dp"
+                android:layout_marginTop="8dp"
+                android:footerDividersEnabled="true"
+                android:padding="20dp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top_actu_div"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
